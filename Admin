@@ -1,6 +1,6 @@
 local Player = game:GetService("Players").LocalPlayer
   if msg:lower() == ".b" then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[MainAccount].character.HumanoidRootPart.Position)*CFrame.new(0,2,0)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(gamegame:GetService("Players").LocalPlayer.character.HumanoidRootPart.Position)*CFrame.new(0,2,0)
   elseif msg:lower() == ".kick" then
     game.Players.LocalPlayer:kick("Pat Kicked You!")
   elseif msg:lower() == ".freeze" then
@@ -33,6 +33,6 @@ end)
 game:GetService("RunService").Stepped:connect(function()
   if getgenv().orbit == true then
 local CurrentTime = tick()
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[MainAccount].character.HumanoidRootPart.Position) * CFrame.Angles(0, 2 * math.pi * CurrentTime * 1 % (2 * math.pi), 0) * CFrame.new(0, 0, 10)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players").LocalPlayer.character.HumanoidRootPart.Position) * CFrame.Angles(0, 2 * math.pi * CurrentTime * 1 % (2 * math.pi), 0) * CFrame.new(0, 0, 10)
   end
 end)
