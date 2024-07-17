@@ -1,6 +1,6 @@
 
 
-local MainAccount = "Kingsman_Kino"
+local MainAccount = (playerName)
 
 
 
