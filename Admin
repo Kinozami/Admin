@@ -1,10 +1,17 @@
 
 
-local MainAccount = (playerName)
+function getPlayerByName(playerName)
+  for _, player in pairs(players) do
+    if player.name == playerName then
+      return player
+    end
+  end
+  return nil -- Player not found
+end
 
 
 
-game.Players[MainAccount].Chatted:Connect(function(msg)
+game.Players[getPlayerByName].Chatted:Connect(function(msg)
   if msg:lower() == ".b" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[MainAccount].character.HumanoidRootPart.Position)*CFrame.new(0,2,0)
   elseif msg:lower() == ".kick" then
